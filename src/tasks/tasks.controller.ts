@@ -32,7 +32,7 @@ export class TasksController {
   }
 
   @Post()
-  createTask(@Body() createTaskDto: CreateTaskDto) {
+  createTask(@Body() createTaskDto: CreateTaskDto): Task {
     return this.tasksService.createTask(createTaskDto);
   }
 
