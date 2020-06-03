@@ -13,8 +13,8 @@ export class TasksService {
     @InjectRepository(TaskRepository) private taskRepository: TaskRepository,
   ) {}
 
-  async getTasks(fitlerDto: GetTasksFilterDto): Promise<Task[]> {
-    return this.taskRepository.getTasks(fitlerDto);
+  async getTasks(fitlerDto: GetTasksFilterDto, user: User): Promise<Task[]> {
+    return this.taskRepository.getTasks(fitlerDto, user);
   }
 
   async getTaskById(id: number): Promise<Task> {
