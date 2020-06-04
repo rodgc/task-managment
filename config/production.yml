@@ -1,2 +1,4 @@
+server:
+  origin: http://nutneku-task-management.s3-website-us-east-1.amazonaws.com
 db:
   synchronize: false
